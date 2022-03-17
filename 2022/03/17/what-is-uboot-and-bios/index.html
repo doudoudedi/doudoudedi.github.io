@@ -27,10 +27,15 @@
 <meta property="og:site_name" content="doudoudedi&#39;s Blog">
 <meta property="og:description" content="前言preface​    最近在漏洞挖掘过程中，涉及到了一些基础的知识比如BIOS，uboot，qemu模拟的方面。 ​    首先开始我们需要了解机器是怎么运行的 ​    一般我们使用的机器都是windows或者Linux，（本人是高端MAC本🤣）， ​    Recently, in the process of vulnerability mining, some basic know">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317163055538.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317163309156.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317163524997.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317170456820.png">
 <meta property="article:published_time" content="2022-03-17T09:24:27.000Z">
-<meta property="article:modified_time" content="2022-03-17T09:26:28.027Z">
+<meta property="article:modified_time" content="2022-03-17T09:31:37.926Z">
 <meta property="article:author" content="doudoudedi">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317163055538.png">
 
 <link rel="canonical" href="http://example.com/2022/03/17/what-is-uboot-and-bios/">
 
@@ -189,7 +194,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-03-17 17:24:27 / Modified: 17:26:28" itemprop="dateCreated datePublished" datetime="2022-03-17T17:24:27+08:00">2022-03-17</time>
+              <time title="Created: 2022-03-17 17:24:27 / Modified: 17:31:37" itemprop="dateCreated datePublished" datetime="2022-03-17T17:24:27+08:00">2022-03-17</time>
             </span>
 
           
@@ -258,11 +263,11 @@
 <p>​    Once again, before nothing happened, we should know that embedded devices generally use the reduced instruction set, so generally speaking, it is not our common x86. Here, the embedded development board is listed.</p>
 <p>​    1.First power on the embedded development board, and then the CPU starts running</p>
 <p>​    2.Then the CPU loads the code solidified in flash &#x2F; ROM into RAM to run. This code is bootloader (uboot)</p>
-<p>![image-20220317163055538](&#x2F;Users&#x2F;doudou&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220317163055538.png)</p>
+<p><img src="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317163055538.png" alt="image-20220317163055538"></p>
 <p>​    If you press the space, you will enter the uboot command line, where you can perform basic mechanical command operations</p>
-<p>![image-20220317163309156](&#x2F;Users&#x2F;doudou&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220317163309156.png)</p>
+<p><img src="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317163309156.png" alt="image-20220317163309156"></p>
 <p>​        Then continue to execute, uboot will set some basic information and then load the kernel.</p>
-<p>![image-20220317163524997](&#x2F;Users&#x2F;doudou&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220317163524997.png)</p>
+<p><img src="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317163524997.png" alt="image-20220317163524997"></p>
 <p>​        最后从flash中加载文件系统执行，配置网络服务等，执行preinit初始化脚本</p>
 <p>​        Finally, load the file system from flash, configure network services, and execute the Preinit initialization script</p>
 <p>​    <strong>答：</strong></p>
@@ -271,7 +276,7 @@
 <pre><code> **Embedded devices are divided into two types: one is Linux kernel and the other is RTOS. RTOS system starts quickly and Linux is relatively slow. Due to the small memory, load the kernel through uboot and then load the file system**
 </code></pre>
 <p>最后可以通过查看&#x2F;proc&#x2F;mtd文件查看flash的文件分区情况TOTOLINK EX200如下</p>
-<p>![image-20220317170456820](&#x2F;Users&#x2F;doudou&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220317170456820.png)</p>
+<p><img src="https://raw.githubusercontent.com/doudoudedi/blog-img/master/img/image-20220317170456820.png" alt="image-20220317170456820"></p>
 <pre><code>#### RTOS
 </code></pre>
 <p>​    RTOS是即时操作系统，非常明显的是其固件非常小通过1M-2M，其中并没有像linux那样的完整的操作系统，将任务与进程挂钩，开机就会启动进程，所以速度较快，而且通常固件较难分析</p>
