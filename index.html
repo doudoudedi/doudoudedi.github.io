@@ -160,6 +160,79 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/17/what-is-uboot-and-bios/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="doudoudedi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="doudoudedi's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/17/what-is-uboot-and-bios/" class="post-title-link" itemprop="url">what is uboot and bios?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-03-17 17:24:27 / Modified: 17:26:28" itemprop="dateCreated datePublished" datetime="2022-03-17T17:24:27+08:00">2022-03-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="前言preface"><a href="#前言preface" class="headerlink" title="前言preface"></a>前言preface</h4><p>​    最近在漏洞挖掘过程中，涉及到了一些基础的知识比如BIOS，uboot，qemu模拟的方面。</p>
+<p>​    首先开始我们需要了解机器是怎么运行的</p>
+<p>​    一般我们使用的机器都是windows或者Linux，（本人是高端MAC本🤣），</p>
+<p>​    Recently, in the process of vulnerability mining, some basic knowledge has been involved, such as BIOS, uboot and QEMU simulation.<br>     First, we need to understand how the machine works<br>     Generally, the machines we use are windows or Linux (I am a high-end MAC🤣),</p>
+<h4 id="什么是BIOS？他有什么用，他做了什么？按下开机键的时候机器干了啥？"><a href="#什么是BIOS？他有什么用，他做了什么？按下开机键的时候机器干了啥？" class="headerlink" title="什么是BIOS？他有什么用，他做了什么？按下开机键的时候机器干了啥？"></a>什么是BIOS？他有什么用，他做了什么？按下开机键的时候机器干了啥？</h4><p>​    <strong>问：</strong></p>
+<p>​    <strong>计算机是最讲逻辑，他会按照他的规则去运行，但是我们不知道他是怎么运行的，我们点开一个程序，或者说我们开机，计算机都会反馈给我们结果但是里面是怎样的呢，它对我们来说就像一个黑盒子，我们只要双击按钮。回到底层，当我们按下开机按钮的那一瞬间，计算机在干嘛呢？</strong></p>
+<p>​    <strong>Q:</strong></p>
+<p>​    <strong>The computer is the most logical. It will run according to its rules, but we don’t know how it runs. When we click a program or turn it on, the computer will feed back to us the results. But what’s inside? It’s like a black box to us. We just need to double-click the button. Back to the bottom, what is the computer doing when we press the start button?</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/17/what-is-uboot-and-bios/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/17/Compile-a-BIOS-and-run-it/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -185,7 +258,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-03-17 14:44:52 / Modified: 17:21:03" itemprop="dateCreated datePublished" datetime="2022-03-17T14:44:52+08:00">2022-03-17</time>
+              <time title="Created: 2022-03-17 14:44:52 / Modified: 17:23:39" itemprop="dateCreated datePublished" datetime="2022-03-17T14:44:52+08:00">2022-03-17</time>
             </span>
 
           
@@ -199,9 +272,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Compile a BIOS and run it</span><br><span class="line">date: 2022<span class="string">-03</span><span class="string">-17</span> 14:44:52</span><br><span class="line"><span class="keyword">tags:</span> Linux operating system learning</span><br></pre></td></tr></table></figure>
-
-<h1 id="Compile-a-BIOS-and-run-it"><a href="#Compile-a-BIOS-and-run-it" class="headerlink" title="Compile a BIOS and run it"></a>Compile a BIOS and run it</h1><h4 id="前言preface"><a href="#前言preface" class="headerlink" title="前言preface"></a>前言preface</h4><p>​    最近在漏洞挖掘过程中，涉及到了一些基础的知识比如BIOS，uboot，qemu模拟的方面。</p>
+          <h1 id="Compile-a-BIOS-and-run-it"><a href="#Compile-a-BIOS-and-run-it" class="headerlink" title="Compile a BIOS and run it"></a>Compile a BIOS and run it</h1><h4 id="前言preface"><a href="#前言preface" class="headerlink" title="前言preface"></a>前言preface</h4><p>​    最近在漏洞挖掘过程中，涉及到了一些基础的知识比如BIOS，uboot，qemu模拟的方面。</p>
 <p>​    首先开始我们需要了解机器是怎么运行的</p>
 <p>​    一般我们使用的机器都是windows或者Linux，（本人是高端MAC本🤣），</p>
 <p>​    Recently, in the process of vulnerability mining, some basic knowledge has been involved, such as BIOS, uboot and QEMU simulation.<br>     First, we need to understand how the machine works<br>     Generally, the machines we use are windows or Linux (I am a high-end MAC🤣),</p>
@@ -469,7 +540,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
